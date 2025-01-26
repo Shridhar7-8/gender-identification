@@ -16,7 +16,7 @@ Trained model checkpoints are stored in the checkpoints directory:
 
 The following checkpoint files are available:
 
-best_model – The model with the best validation accuracy during training.
-current_checkpoint – The latest model checkpoint from training (useful for resuming training).
-final_model – The final trained model after all epochs.
+- best_model – The model with the best validation accuracy during training.
+- current_checkpoint – The latest model checkpoint from training (useful for resuming training).
+- final_model – The final trained model after all epochs.
 
