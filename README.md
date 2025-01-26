@@ -1,41 +1,22 @@
-# ekstep-language-identification
+# gender-identification
+Gender Identification Model
+This project is based on the EkStep Language Identification repository, originally developed as a part of [Vakyansh's](https://open-speech-ekstep.github.io/) recipes to build state of the art Speech Recogniition Model. The repository was modified and trained to classify gender (male/female) instead of language identification.
 
-This repository is a part of [Vakyansh's](https://open-speech-ekstep.github.io/) recipes to build state of the art Speech Recogniition Model.
+# Overview
+The model takes audio utterances as input and classifies them based on gender. It uses a deep learning-based architecture and is trained on labeled speech datasets.
 
-The language Identification repository works for classifying the audio utterances into different classes.This repository can work for 2 or more classes depending on the requirement.
+# Dataset
+The dataset consists of audio samples labeled with gender categories (male, female). The data is preprocessed and formatted according to the structure required by the ekstep-language-identification repository.
 
-### Preparing the Data
 
-Keep separate audio folders for different classes as well as the train and valid sets of each. The audio files should be present in .wav format.
-To prepare the data edit the data paths in file data/create_manifest.py.
+# Model Checkpoints
+Trained model checkpoints are stored in the checkpoints directory:
 
-To run the file:
-```python
-python create_manifest.py
-```
-This creates the train and valid csv files in the ```data/ ```directory.
+📌 Path: gender-identification\checkpoints
 
-### Training the Model
-Edit the train_config.yml file for the training parameters. Give the file path for train and valid csv's created while preparing the data.
+The following checkpoint files are available:
 
-To start the training run
-```python
-python train.py
-```
+best_model – The model with the best validation accuracy during training.
+current_checkpoint – The latest model checkpoint from training (useful for resuming training).
+final_model – The final trained model after all epochs.
 
-### Inference
-Edit the language_map.yml to map the labels(0,1, etc) with the languege names or codes('hi','en', etc)
-
-To infer, edit inference.py file and provide the best_checkpoint path and audio file name.
-
-Parameters:
-
-model_path : Path to best_checkpoint.pt
-
-audio_path : Audio file path
-
-Run the file:
-```python
-python inference.py
-```
-This runs on a single audio file.
