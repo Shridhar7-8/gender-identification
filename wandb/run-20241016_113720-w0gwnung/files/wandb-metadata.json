@@ -1,0 +1,43 @@
+{
+  "os":  "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "python":  "3.10.12",
+  "startedAt":  "2024-10-16T11:37:21.001535Z",
+  "program":  "/mnt/32mins/gender_detection/ekstep-language-identification/train.py",
+  "codePath":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/Open-Speech-EkStep/ekstep-language-identification.git",
+    "commit":  "59c93d33aa9fccf8e59fe0521ef18b06099638ba"
+  },
+  "email":  "shridharkur@gmail.com",
+  "root":  "/mnt/32mins/gender_detection/ekstep-language-identification",
+  "host":  "aryabhata",
+  "username":  "ptf32mins",
+  "executable":  "/mnt/32mins/language_detection/venv/bin/python3",
+  "codePathLocal":  "train.py",
+  "cpu_count":  48,
+  "cpu_count_logical":  96,
+  "gpu":  "[NVIDIA A40]",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "871837028352",
+      "used":  "69292871680"
+    }
+  },
+  "memory":  {
+    "total":  "540706443264"
+  },
+  "cpu":  {
+    "count":  48,
+    "countLogical":  96
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA A40",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}

@@ -1,0 +1,12 @@
+/mnt/32mins/language_detection/venv/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/mnt/32mins/language_detection/venv/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Total paramaeters:  11171266
+Trainable parameters:  11171266
+Traceback (most recent call last):
+  File "/mnt/32mins/gender_detection/ekstep-language-identification/train.py", line 92, in <module>
+    trained_model = train(1, num_epochs, device, np.Inf, loaders, model, optimizer, criterion, use_cuda, checkpoint_path,
+  File "/mnt/32mins/language_detection/venv/lib/python3.10/site-packages/numpy/__init__.py", line 397, in __getattr__
+    raise AttributeError(
+AttributeError: `np.Inf` was removed in the NumPy 2.0 release. Use `np.inf` instead.

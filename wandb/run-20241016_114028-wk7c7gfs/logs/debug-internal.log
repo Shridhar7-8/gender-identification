@@ -1,0 +1,18 @@
+{"time":"2024-10-16T11:40:28.127755488Z","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-16T11:40:28.127765347Z","level":"INFO","msg":"created symlink","path":"/mnt/32mins/gender_detection/ekstep-language-identification/wandb/run-20241016_114028-wk7c7gfs/logs/debug-core.log"}
+{"time":"2024-10-16T11:40:28.169292567Z","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-16T11:40:28.181418203Z","level":"INFO","msg":"created new stream","id":"wk7c7gfs"}
+{"time":"2024-10-16T11:40:28.182200121Z","level":"INFO","msg":"stream: started","id":"wk7c7gfs"}
+{"time":"2024-10-16T11:40:28.182242548Z","level":"INFO","msg":"handler: started","stream_id":{"value":"wk7c7gfs"}}
+{"time":"2024-10-16T11:40:28.182292075Z","level":"INFO","msg":"sender: started","stream_id":{"value":"wk7c7gfs"}}
+{"time":"2024-10-16T11:40:28.182321686Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wk7c7gfs"}}
+{"time":"2024-10-16T11:40:28.520865511Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-16T11:40:28.521895559Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-16T11:40:35.234885175Z","level":"INFO","msg":"stream: closing","id":"wk7c7gfs"}
+{"time":"2024-10-16T11:40:35.234940475Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-16T11:40:35.238320291Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-16T11:40:36.580556412Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-16T11:40:36.96312391Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"wk7c7gfs"}}
+{"time":"2024-10-16T11:40:36.963188082Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wk7c7gfs"}}
+{"time":"2024-10-16T11:40:36.963201354Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"wk7c7gfs"}}
+{"time":"2024-10-16T11:40:36.964183139Z","level":"INFO","msg":"stream: closed","id":"wk7c7gfs"}

@@ -1,5 +1,5 @@
 import os
-
+from models.model import get_model
 import numpy as np
 import torch
 import yaml
@@ -13,10 +13,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def load_model(model_path):
-    # model = get_model(device)
+    
+    model = get_model(num_classes=2, device="cuda")
     if os.path.isfile(model_path):
-        model = torch.load(model_path, map_location=device)
-        # model.load_state_dict(checkpoint['state_dict'])
+        checkpoint = torch.load(model_path, map_location=device)
+        model.load_state_dict(checkpoint['state_dict'])
         model.eval()
         print("Model loaded from ", model_path)
         return model
@@ -66,8 +67,8 @@ def evaluation(audio_path, model_path):
 
 if __name__ == "__main__":
     # Just edit model_path and audio_path
-    model_path = 'path_to_best_model'
-    audio_path = 'path_to_audio.wav'
+    model_path = '/mnt/32mins/gender_detection/ekstep-language-identification/checkpoints/best_model/best_checkpoint.pt'
+    audio_path = '/mnt/32mins/sansad_data/rajya_sabha_monsoon_2020/clip_735.wav'
     audio_ext = audio_path.split('.')[-1]
 
     if not os.path.isfile(model_path):

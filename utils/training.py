@@ -1,6 +1,6 @@
 import os
 import shutil
-
+import wandb
 import numpy as np
 import torch
 import yaml
@@ -76,7 +76,7 @@ def save_ckp(state, model, valid_loss, valid_loss_min, checkpoint_path, best_mod
 
 
 def train(start_epochs, n_epochs, device, valid_loss_min_input, loaders, model, optimizer, criterion, use_cuda,
-          checkpoint_path, save_for_each_epoch=True):
+          checkpoint_path, save_for_each_epoch=True,log_wandb=False):
     """
     Keyword arguments:
     start_epochs -- the real part (default 0.0)
@@ -178,6 +178,16 @@ def train(start_epochs, n_epochs, device, valid_loss_min_input, loaders, model, 
         valid_loss = valid_loss / len(loaders['test'].dataset)
         train_acc = accuracy_score(train_target, train_predict)
         valid_acc = accuracy_score(valid_target, valid_predict)
+
+        # Log training and validation metrics to wandb
+        wandb.log({
+            "epoch": epoch,
+            "train_loss": train_loss,
+            "train_accuracy": train_acc,
+            "valid_loss": valid_loss,
+            "valid_accuracy": valid_acc,
+            "learning_rate": optimizer.param_groups[0]['lr']
+        })
 
         # print training/validation statistics
         print(
